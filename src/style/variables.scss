@@ -1,0 +1,34 @@
+$headerHeight: 6vh;
+$fontSizeContent: 1vw;
+$header-menu: #004ecb;
+$first-bg: var(--first-bg, #1B2254);
+$second-bg: var(--second-bg, #0E0A38);
+$third-bg: var(--third-bg, #0054FF);
+$img-bg: var(--img-bg, #131844);
+$td-bg: var(--td-bg, rgba(12, 19, 69, 0.5));
+$th-bg: var(--th-bg, rgba(12, 19, 69, 0.6));
+$td-th-color: var(--td-th-color, #17EEFE);
+$board-bg: var(--board-bg, rgba(1, 6, 21, 0.35));
+$bg-border: var(--bg-border, #5177FB);
+$first-font: var(--first-font, #040404);	//$first-font: var(--first-font, #ADEDFF);
+$second-font: var(--second-font, #FFFFFF);
+$title-show: var(--title-show, #040405); //#F5DEB3
+$title-edit: var(--title-edit, #040405);  //#cac8ce
+$black-comment: var(--black-comment, #040404);
+$background-comment: var(--background-comment, #c9d5e2);
+$collapse-color: var(--collapse-color, #98ACEE);
+$border-color: var(--border-color, #2067C0);
+$button-bg: var(--button-bg, #016FEA);
+$setting-font: var(--setting-font, #2067c0);
+$trans-border: var(--trans-border, #409EFF);
+$shadow: var(--trans-border, #888888);
+
+// 导出界面所需颜色
+:export {
+  firstBg: $first-bg;
+  imgBg: $img-bg;
+  boardBg: $board-bg;
+  borderColor: $border-color;
+  bgBorder: $bg-border;
+  fontSizeContent: $fontSizeContent;
+}

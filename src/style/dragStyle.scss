@@ -1,0 +1,350 @@
+@import './variables.scss';
+
+.individual, .organization {
+  position: absolute;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  -webkit-touch-callout: none;
+  /*系统默认菜单被禁用*/
+  -webkit-user-select: none;
+  /*webkit浏览器*/
+  -moz-user-select: none;
+  /*火狐*/
+  -ms-user-select: none;
+  /*IE10*/
+  user-select: none;
+  .borderStyAll {
+    width: 100%;
+    height: 100%;
+    border: 5px solid #c9d5e2; //border: 5px solid #a6a8ad;
+  }
+  .borderStyContent {
+    border-radius: 20px;
+    border: 5px solid #c9d5e2; //border: 5px solid #a6a8ad;
+    background-color: $second-font;
+  }
+  .detail {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 45%;
+    /* padding: 0.5% 0.5% 0; */
+    text-align: left;
+    color: $second-font;
+    font-size: $fontSizeContent;
+
+    .detail-lov {
+      width: 100%;
+      height: 50px;
+      /* padding: 5px 20px 0; */
+    }
+    .contentTitle {
+      font-weight: bold;
+      color: black;
+      height: 15%;
+      padding: 1% 0 0 1%;
+    }
+    /* .contentTitle::before {
+      content:'-';
+      margin-right: 12px;
+      color: #2067c0;
+      background-color: #2067c0;
+    } */
+    .labelColor {
+      display: inline-block;
+      width: 75%;
+      text-align: right;
+      color: #2067c0;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+    .contentBody {
+      width: 100%;
+      height: 85%;
+      padding: 1%;
+    }
+    .dw-form {
+      padding-bottom: 0;
+    }
+    .contentJbxx .contentBodyInfo {
+     width: 100%;
+     height: 85%;
+      > div {
+        height: 11%;
+      > div:nth-child(1){
+        display: inline-block;
+        width: 45%;
+        white-space: nowrap;
+        text-align: right;
+        color: #2067c0;
+        font-weight: bold;
+      }
+      > div:nth-child(2){
+        display: inline-block;
+        width: 55%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        vertical-align: middle;
+      }
+    }
+   }
+    .detail-message {
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      .contentJbxx {
+        position: absolute;
+        width: 22%;
+        height: 100%;
+        padding: 0;
+        color: $title-edit;
+      }
+      .contentJbxx1 {
+        width: 24%;
+      }
+      .contentTable {
+        position: absolute;
+        width: 30%;
+        height: 100%;
+        left: 23%;
+        table {
+          width: 100%;
+          height: 100%;
+          border: 0 solid transparent;
+          border-spacing: 0;
+          border-collapse: collapse;
+          text-align: center;
+          tr {
+            td {
+              span {
+                color: $black-comment;
+              }
+            }
+            th {
+              span {
+                color: #2067c0;
+              }
+            }
+          }
+          tr:nth-child(odd)
+          {
+            background-color: #dbebfa;
+          }
+          tr:nth-child(even)
+          {
+            background-color: #edf4fe;
+          }
+        }
+      }
+      .contentTable1 {
+        left: 24%;
+        width: 40%;
+      }
+      .contentEcharts {
+        position: absolute;
+        width: 24%;
+        height: 100%;
+        left: 58%;
+      }
+      .contentEcharts1 {
+        width: 36%;
+        left: 64%;
+      }
+      .contentDwhydb {
+        position: absolute;
+        width: 17%;
+        height: 100%;
+        left: 82%;
+      }
+    }
+
+    .detail-compare {
+      width: 100%;
+      height: 28%;
+      padding: 10px 20px;
+
+      .contentTitle2 {
+        //height: 15%;
+      }
+
+      .compare-body {
+        width: 100%;
+        height: 80%;
+        padding-top: 0.5%;
+      }
+    }
+  }
+
+  .option {
+    height: 100%;
+    float: left;
+    width: 100%;
+    background-color: $background-comment;
+    overflow-y: auto;
+  }
+
+  .drag-board {
+    height: 54%;
+    width: 100%;
+    /* padding: 0.5%; */
+  }
+  .thuTitle:before {
+    content: attr(data-content);
+    color: $first-font;
+    font-size: 0.8vmax;
+    font-weight: bold;
+    float: left;
+    margin: 1%;
+    padding: 0 5%;
+    background-color: $second-font;
+  }
+  .operation {
+    display: flex;
+    flex-direction: column;
+    border: 5px solid #a6a8ad;
+  }
+
+  .createItem {
+    width: 100%;
+    border-bottom: 2px $border-color solid;
+  }
+
+  /*滚动条*/
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: $third-bg;
+    border: none;
+    border-radius: 0;
+  }
+
+  ::-webkit-scrollbar-track-piece {
+    background-color: $bg-border;
+  }
+
+  .el-select {
+    width: 80%;
+    margin: 3% 0 3% 0;
+
+    ::v-deep {
+      .el-form-item__label {
+        color: $first-font;
+        vertical-align: middle;
+      }
+
+      .el-input__inner {
+        vertical-align: middle;
+        font-weight: 500;
+        font-size: $fontSizeContent;
+        color: $first-font;
+        text-align: center;
+      }
+    }
+  }
+
+  .el-radio-group {
+    float: left;
+    margin-left: 1%;
+    margin-top: 1%;
+  }
+
+  .el-radio {
+    color: $first-font;
+  }
+
+  .rightMouseOver {
+    position: absolute;
+    left: 99%;
+    height: calc(100% - 80px);
+    width: 1%;
+    z-index: 3000;
+  }
+
+  .rightMouseLeave {
+    position: absolute;
+    left: calc(100% - 400px);
+    top: 0;
+    height: 100%;
+    width: 100px;
+    z-index: 3000;
+  }
+
+  ::v-deep .dv-loading {
+    .loading-tip {
+      color: $second-font;
+    }
+  }
+
+  .autoFP {
+    /* width: 100%; */
+    height: 3vh;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+  }
+
+  .hyCls {
+    width: 100%;
+    height: 100%
+  }
+
+  .hyCls td {
+    width: 25%;
+  }
+
+  .compare-item {
+    width: 100%;
+    color: $title-edit;
+    margin-top: 3%;
+  }
+  .detail-lov ::v-deep {
+    .el-button {
+      color: #ffffff;
+      background: #2067c0;
+    }
+  }
+  .myLov ::v-deep { //margin-left: 43%; width: 14%;
+    min-height: auto;
+    width: 100%;
+    .el-input {
+      width: 100%;
+    }
+    .el-form-item {
+      margin-bottom: 0px;
+    }
+    .el-form-item__content {
+      margin-left: 0 !important;
+    }
+    .el-input__inner {
+      height: 2.8vh;
+      border: 2px solid $background-comment;
+      color: $title-show;
+      font-size: 0.9vw;
+    }
+
+    input::-webkit-input-placeholder {
+      color: $title-show;
+      font-size: 0.9vw;
+    }
+
+    input::-moz-placeholder {
+      /* Mozilla Firefox 19+ */
+      color: $title-show;
+    }
+
+    input:-moz-placeholder {
+      /* Mozilla Firefox 4 to 18 */
+      color: $title-show;
+    }
+
+    input:-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: $title-show;
+    }
+  }
+}

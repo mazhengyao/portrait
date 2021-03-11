@@ -1,0 +1,479 @@
+@import './variables.scss';
+
+.createComp, .editComp {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border: 5px solid $background-comment;
+  > div {
+    border: 5px solid $background-comment;
+    border-radius: 20px;
+  }
+  .transText {
+    width: 36vw;
+    height: 25vh !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px $bg-border solid;
+    border-radius: 10px;
+  }
+  .contentTitle::before {
+    content:'-';
+    margin-right: 12px;
+    color: #2067c0;
+    background-color: #2067c0;
+  }
+  .save-screen {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .option-select {
+    padding-bottom: 1%;
+  }
+
+  .option-item {
+    flex: 1;
+    padding: 0 2%;
+  }
+
+  .showDiv {
+    height: 100%;
+    float: left;
+  }
+
+  .clickDiv {
+    position: relative;
+    width: 18%;
+    background-color: #fff;
+    padding-top: 20px;
+  }
+
+  .chartDiv {
+    position: relative;
+    width: 40%;
+    background-color: $second-font;
+    ::v-deep .el-loading-mask {
+      display: none;
+    }
+    .chartDivBor {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 10px solid #61a2ea;
+      border-radius: 15px;
+    }
+  }
+
+  .editDiv {
+    position: relative;
+    width: 42%;
+    background-color: $second-font;
+  }
+
+  .inputDiv {
+    height: 16vh;
+    width: 100%;
+  }
+
+  .editP {
+    color: $title-edit;
+    font-weight: 600;
+    font-size: 2vh;
+    line-height: 1;
+    margin: 0;
+  }
+
+  .editLabel {
+    color: $title-show;
+    font-weight: 500;
+    font-size: $fontSizeContent;
+    white-space: nowrap;
+    margin: 1vh 0 0 0;
+    width: 30%;
+    float: left;
+    text-align: right;
+    display: block;
+  }
+
+  .dragDiv {
+    height: 59vh;
+    width: 100%;
+    display: inline-block;
+  }
+
+  .bigDiv {
+    vertical-align: top;
+    height: 100%;
+    width: 50%;
+    display: inline-block;
+  }
+
+  .smallDiv {
+    height: 44%;
+    width: 100%;
+  }
+
+  .optionalP {
+    float: left;
+    margin-left: 5vh;
+    margin-bottom: 1vh;
+  }
+
+  .topP {
+    float: left;
+    width: 80%;
+    margin-bottom: 1vh;
+  }
+
+  .middleP {
+    float: left;
+    width: 80%;
+    margin: 1vh 0;
+  }
+
+  .optionalDiv {
+    width: 80%;
+    height: 50.5vh;
+    float: left;
+    margin-left: 10%;
+    border: 1px solid $background-comment;
+    overflow-y: auto;
+    border-radius: 10px;
+  }
+
+  .contentDiv {
+    width: 80%;
+    height: 50.5vh;
+    float: left;
+    border: 1px solid $background-comment;
+    overflow-y: auto;
+    border-radius: 10px;
+  }
+
+  .sameDiv {
+    width: 80%;
+    height: 23vh;
+    float: left;
+    border: 1px solid $background-comment;
+    overflow-y: auto;
+    border-radius: 10px;
+  }
+
+  .lesserDiv {
+    height: 32%;
+  }
+
+  .mixedDiv {
+    height: 16vh;
+  }
+
+  .thuTitle:before {
+    content: attr(data-content);
+    color: $first-font;
+    font-size: 0.8vmax;
+    font-weight: bold;
+    float: left;
+    margin: 1%;
+    padding: 0 5%;
+    background-color: $second-font;
+  }
+
+  .button {
+    background-color: $bg-border;
+    color: $second-font;
+    float: right;
+    margin: 2vh 0 0 1vw;
+    border: 0;
+    font-size: 1vw;
+    padding: 1% 2%;
+
+    &:hover {
+      color: $first-font;
+    }
+  }
+
+  .buttons {
+    position: absolute;
+    width: 100%;
+    top: 90%;
+    height: 6vh;
+    padding-right: 2%;
+  }
+
+  .list-group {
+    height: 100%;
+  }
+
+  .list-group-item {
+    background-color: $third-bg;
+    color: $second-font;
+    font-weight: 500;
+    font-size: 2vh;
+    width: auto;
+    padding: 1px 5px;
+    display: inline-block;
+    margin: 8px;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .subItem {
+    width: 34%;
+    height: 64px;
+    margin: 5% 8% 5% 8%;
+    display: inline-block;
+  }
+
+  .itemP {
+    margin: 0;
+    text-align: center;
+  }
+
+  .imgDiv {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+
+  .el-tabs {
+    margin-bottom: 4%;
+
+    ::v-deep {
+      .el-tabs__item {
+        padding-left: 20px !important;
+        font-size: 1.2vw;
+        font-weight: 600;
+        margin: 5px 0;
+      }
+      .el-tabs__active-bar {
+        background-color: $bg-border;
+      }
+    }
+  }
+
+  /*滚动条*/
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: $third-bg;
+    border: none;
+    border-radius: 0;
+  }
+
+  ::-webkit-scrollbar-track-piece {
+    background-color: $bg-border;
+  }
+
+  .icondiv {
+    font-size: 270%;
+  }
+
+  .styleP {
+    padding-left: 1vw;
+    display: block;
+    width: 100%;
+  }
+
+  .backgroundDiv {
+    width: 50%;
+    height: 17vh;
+    float: left;
+  }
+
+  .textDiv {
+    width: 50%;
+    height: 50vh;
+    float: left;
+  }
+
+  .tableDiv {
+    width: 50%;
+    height: 50vh;
+    float: left;
+  }
+
+  .titleDiv {
+    width: 50%;
+    height: 17vh;
+    float: left;
+  }
+
+  .legendDiv {
+    width: 50%;
+    height: 32vh;
+    float: left;
+  }
+
+  .featureDiv {
+    width: 50%;
+    height: 35vh;
+    float: left;
+  }
+
+  .axisDiv {
+    width: 50%;
+    height: 32vh;
+    float: left;
+  }
+
+  .el-color-picker {
+    display: inline-block;
+    float: left;
+    margin-right: 50%;
+  }
+
+  .el-slider {
+    width: 50%;
+    float: left;
+  }
+
+  .el-switch {
+    width: 60%;
+    height: 1.5vmax;
+    float: left;
+    margin-top: 1vmin;
+    display: block;
+  }
+
+  .el-input, .el-cascader, .el-select, .el-input-number {
+    width: 60%;
+    margin: 1% 10% 1% 0;
+
+    ::v-deep {
+      .el-form-item__label {
+        color: $first-font;
+        vertical-align: middle;
+      }
+
+      .el-input__inner {
+        vertical-align: middle;
+        font-weight: 500;
+        font-size: $fontSizeContent;
+        color: $title-show;
+      }
+    }
+  }
+
+  .el-input-number {
+    width: 50%;
+
+    ::v-deep {
+      .el-input-number__decrease, .el-input-number__increase {
+        background-color: $bg-border;
+      }
+
+      .el-icon-arrow-up, .el-icon-arrow-down {
+        color: $second-font;
+
+        &:hover {
+          color: $first-font;
+        }
+      }
+    }
+  }
+
+  .el-select {
+    ::v-deep .el-input__inner {
+      text-align: center;
+    }
+  }
+
+  .styleBox {
+    width: 50%;
+    float: left;
+  }
+
+  .styleLabel {
+    width: 30%;
+    display: inline-block;
+    float: left;
+  }
+
+  .option {
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .createItem {
+    width: 100%;
+    padding: 1% 0;
+  }
+
+  .thnSelect {
+    width: 94%;
+    margin: 2% 3% 0;
+  }
+
+  .transChart {
+    width: 36vw;
+    height: 45vh !important;
+    border: 2px var(--bg-border, #5177FB) solid;
+    border-radius: 10px;
+  }
+
+  .transTable {
+    width: 36vw;
+    height: 45vh !important;
+    overflow-y: auto;
+    border: 2px $bg-border solid;
+    border-radius: 10px;
+  }
+
+  .el-radio {
+    color: $title-show;
+  }
+
+  .el-radio-group {
+    margin-top: 2%;
+    margin-left: 1%;
+    width: 69%;
+    height: 4vh;
+  }
+
+  .el-collapse-item {
+    ::v-deep {
+      .el-collapse-item__header {
+        //padding-left: 35%;
+        color: $collapse-color;
+        font-size: $fontSizeContent;
+        font-weight: 600;
+        //border-color: $first-bg;
+      }
+      /* .el-collapse-item__wrap {
+        border-color: $first-bg;
+      } */
+      .el-collapse-item__content {
+        color: $collapse-color;
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .el-table {
+    background-color: transparent;
+  }
+
+  .el-table--border:after, .el-table--group:after, .el-table:before {
+    display: none;
+  }
+
+  .el-table--border, .el-table--group {
+    border-color: transparent;
+  }
+
+  ::v-deep .el-table__empty-block {
+    border-color: transparent;
+  }
+}
